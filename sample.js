@@ -16,7 +16,7 @@
         
     }
 
-    checkReadyState() {
+    checkRedyState() {
         let readyStateCheck = setInterval(function(){
             if(document.readyState == "complete") {
                 clearInterval(readyStateCheck);
