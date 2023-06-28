@@ -45,15 +45,18 @@
 
             this.itemsArray.push( { productId, itemCount } );
         }
+        
     }
 
     async initiateCustomCheckout() {
         console.log(this.itemArray);
-        console.log("lalalalalalaaaa laa")
-        return
+        const cartId = LS.cart.id;
+        const cartDataObj = { items: this.itemArray, cartId };
+        console.log(cartDataObj);
+        
         const req = await fetch(this.checkoutURL, {
             method: "POST",
-            body: JSON.stringify({ items: this.itemArray })
+            body: JSON.stringify(cartDataObj)
         });
 
         const res = await req.text();
