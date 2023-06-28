@@ -49,9 +49,9 @@
     }
 
     async initiateCustomCheckout() {
-        console.log(this.itemArray);
+        console.log(this.itemsArray);
         const cartId = LS.cart.id;
-        const cartDataObj = { items: this.itemArray, cartId };
+        const cartDataObj = { items:  this.itemsArray, cartId };
         console.log(cartDataObj);
         
         const req = await fetch(this.checkoutURL, {
