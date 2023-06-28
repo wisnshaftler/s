@@ -38,6 +38,7 @@
 
     updateItemsArray() {
         //get all items array
+        this.itemsArray = [];
         const allProductInputs = document.querySelectorAll(`[data-store="cart-form"] input[type="number"]`);
         for(let itemInput of allProductInputs) {
             const productId = itemInput.getAttribute(`data-item-id`);
